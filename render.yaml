@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: rahyab-control
+    runtime: docker
+    plan: free
+    region: frankfurt
+    healthCheckPath: /ping
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_CHAT_ID
+        sync: false
+      - key: WEBHOOK_SECRET
+        sync: false
+      - key: GH_PAT
+        sync: false
+      - key: GH_REPO
+        value: alirezaah1978-ux/lead-hunter
